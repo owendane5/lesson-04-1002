@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Navigation, Images, and Tables</title>
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px dashed #ccc;
+            padding: 1em;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./heroes.html">Heroes Example</a></li>
+                <li><a href="./income.html">Income Example</a></li>
+            </ul>
+        </nav>
+
+        <h1>Navigation, Images, and Tables</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Avengers</h2>
+
+            <!-- 
+                    Objective:
+                    A table that records the various Avengers,
+                    their names, descriptions, and a thumbnail image.
+                 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Thumbnail</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Captain America</td>
+                        <td>Vowing to serve his country any way he could, young Steve Rogers took the super soldier
+                            serum to
+                            become America's one-man army. Fighting for the red, white and blue for over 60 years,
+                            Captain
+                            America is the living, breathing symbol of freedom and liberty.</td>
+                        <td>
+                            <figure>
+                                <img src="./images/captain-america.jpg"
+                                    alt="An illustration of Captain America with a yellow background."><br>
+                                <cite>
+                                    source: <a
+                                        href="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087.jpg">Image
+                                        from Marvel.com</a>
+                                </cite>
+                            </figure>
+                        </td>
+                    <tr>
+                    <td>Black Widow</td>
+                    <td>Natasha Romanoff, also known as Black Widow, is a world-renowned super spy and one of S.H.I.E.L.D.'s top agents. Her hand-to-hand combat skills, intelligence, and unpredictability make her a deadly secret weapon. True to her mysterious nature, Black Widow comes and goes as she pleases, but always appears exactly when her
+                                                        particular skills are needed.</td>
+                    <td>
+                        <figure>
+                            <img src="./images/black-widow.jpg" alt="illustration of Black Widow aiming her taser bracelet.">
+                            <cite>
+                                source:<a href="http://i.annihil.us/u/prod/marvel/i/mg/a/03/523219743a99b.jpg">Image from Marvel</a>
+                            </cite>
+                        </figure>
+                    </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+    </main>
+
+    <footer>&copy;2022 Shaun McKinnon</footer>
+</body>
+
+</html>

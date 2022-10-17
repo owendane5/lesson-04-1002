@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+        <title>Navigation, Images, and Tables</title>
+   
+   
+        <style>
+            table,
+            tr,
+            td,
+            th {
+                border: 1px dashed #ccc;
+                padding: 1em;
+            }
+    
+            table {
+                width: 80%;
+                margin: 0 auto;
+            }
+        
+
+        </style>
+
+   
+   
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./heroes.html">Heroes Example</a></li>
+                    <li><a href="./income.html">Income Example</a></li>
+                </ul>
+            </nav>
+
+            <h1>Navigation, Images, and Tables</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>September Income</h2>
+
+                <!-- 
+                    Objective:
+                    A table that records the various income sources
+                    as well a their increments over a month,
+                    the number of increments,
+                    and the grand amount.
+
+                    Add a table footer that displays the total for all
+                    sources.
+                 -->
+
+                 <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Increment</th>
+                            <th>Quantity</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Gilos Gas</th>
+                            <td>15.00</td>
+                            <td>80</td>
+                            <td>1200.00</td>
+                        </tr>
+
+                        <tr>
+                            <th>Georgian College</th>
+                            <td>35.00</td>
+                            <td>24</td>
+                            <td>840</td>
+                        </tr>
+
+                        <tr>
+                            <th>Canadian Cutters</th>
+                            <td>500.00</td>
+                            <td>1</td>
+                            <td>500.00</td>
+                        </tr>
+
+                        <tr>
+                            <th>Government Kick Backs</th>
+                            <td>360.00</td>
+                            <td>1</td>
+                            <td>360.00</td>
+                        </tr>
+
+                        <tr>
+                            <th>Gifts</th>
+                            <td>100.00</td>
+                            <td>1</td>
+                            <td>100.00</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tfoot>
+
+                 </table>
+            </section>
+        </main>
+
+        <footer>&copy;2022 Shaun McKinnon</footer>
+
+        <script>
+            const totalCells = document.querySelectorAll("tr > td:nth-child(4)");
+
+            let total = 0;
+
+            for (const cell of totalCells) total += parseInt(cell.textContent) || 0;
+
+            document.querySelector("tfoot > tr > td").textContent = `$${total.toFixed(2)}`;
+        </script>
+    </body>
+</html>
